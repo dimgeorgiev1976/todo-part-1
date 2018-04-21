@@ -13,6 +13,9 @@ var $taskButtons = $('<div class="task-item_buttons"><button type="button" data-
 			$taskHolder.append($taskTitle).append($taskButtons);
 			$('#listOfTasks').append($taskHolder);
 			showNotify('new');
+			toggleEmptyList();
+			$('#addNewTask').val(' ');
+
 			});
 			
 				//4.Обрабатоват клик по кнопке удалит, удаЛИТ  текущую задачу!
@@ -21,6 +24,8 @@ $('#listOfTasks').on('click', '[data-action="task-delete"]', function (e) {
 e.preventDefault();
 $(this).parents('.task-item').remove();
 showNotify('delete');
+toggleEmptyList();
+
 });
 				//5.Отмечат въйпалнены задач!
 $('#listOfTasks').on('click', '[data-action="task-done"]', function (e) {
@@ -51,6 +56,8 @@ var $notifyNew = $('<div class="alert alert-warning" role="alert">Задач д�
 						break;
 		}
 			console.log('Задачa добавлена!');
+			// if ( $ ('#notifyholder .alert')) {
+			if ('#notifyholder .alert').fadeout();
 			$notifyBlock.hide();
 			$('#notifyholder').append($notifyBlock);
 			$notifyBlock.fadeIn();
@@ -61,6 +68,20 @@ var $notifyNew = $('<div class="alert alert-warning" role="alert">Задач д�
 			},2000);
 			},2000);
 		}
+function toggleEmptyList() {
+		if ( $('#listOfTasks').children().length > 1 ) {
+					console.log('Have Task!');
+					$('#emptyList').hide();
+
+		} else {
+					console.log('No Task!');
+					$('#emptyList').show();
+		}
+
+}
+// toggleEmptyList();
+
+
 
 });
 // 7.Спецблок что списък дел пуст! Когада задачи нет!
