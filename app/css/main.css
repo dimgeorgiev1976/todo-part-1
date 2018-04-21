@@ -1,5 +1,5 @@
 body {
-  background-color: #E4E5E7;
+  background-color: #EFDD61;
   padding-top: 100px;
 }
 .aside {
@@ -14,4 +14,18 @@ body {
 .task-title {
   font-weight: 400;
   padding-top: 5px;
+}
+.gray {
+  color: #35AFE8;
+}
+.task-title--done {
+  text-decoration: line-through;
+  color: #D7D7D5;
+}
+.task-item_buttons button {
+  margin-right: 5px;
+  float: left;
+}
+.task-item_buttons button:last-child {
+  margin-right: 0;
 }
