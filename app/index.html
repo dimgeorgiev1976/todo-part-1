@@ -14,43 +14,58 @@
 		<div class="display-4 mb-2">ToDo приложение</div>
 		<div class="h4 mb-5">список задач на сегодня</div>
 
-		<div class="alert alert-warning" role="alert">
-		  Задач добавлена!
+	<div class="alert alert-warning" role="alert">
+		Задач добавлена!
+	</div>
+
+	<div class="alert alert-success" role="alert">
+		Задач выполнена!
+	</div>
+
+	<div class="alert alert-danger" role="alert">
+		Задач удалена!
+	</div>
+
+	<!-- List of tasks -->
+	<div class="card mb-4">
+		<ul id='listOfTasks' class="list-group list-group-flush">
+
+
+<li class="list-group-item d-flex justify-content-between task-item">
+	<span class="task-title">Купить молоко</span>
+			<div class='task-item_buttons'><button type="button" data-action="task-done" class="btn btn-light align-self-end gray"><i class="fa fa-check"></i></button>
+
+			<button type="button" data-action="task-delete" class="btn btn-light align-self-end gray"><i class="fa fa-times"></i></button>
 		</div>
+</li>
 
-		<div class="alert alert-success" role="alert">
-		  Задач выполнена!
+<li class="list-group-item d-flex justify-content-between task-item">
+		<span class="task-title">Сходить в спортзал</span>
+				<div class='task-item_buttons'><button type="button" data-action="task-done" class="btn btn-light align-self-end gray"><i class="fa fa-check"></i></button>
+
+			<button type="button" data-action="task-delete" class="btn btn-light align-self-end gray"><i class="fa fa-times"></i></button>
 		</div>
+</li>
 
-		<div class="alert alert-danger" role="alert">
-		   Задач удалена!
+
+<li class="list-group-item d-flex justify-content-between task-item">
+	<span class="task-title">Пройти урок по веб-разработке</span>
+			<div class='task-item_buttons'><button type="button" data-action="task-done" class="btn btn-light align-self-end gray"><i class="fa fa-check"></i></button>
+
+			<button type="button" data-action="task-delete" class="btn btn-light align-self-end gray"><i class="fa fa-times"></i></button>
 		</div>
+</li>
 
-		<!-- List of tasks -->
-		<div class="card mb-4">
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item d-flex justify-content-between">
-					<span class="task-title">Купить молоко</span>
-					<button type="button" data-action="delete-task" class="btn btn-light align-self-end">Удалить</button>
-				</li>
 
-				<li class="list-group-item d-flex justify-content-between">
-					<span class="task-title">Сходить в спортзал</span>
-					<button type="button" data-action="delete-task" class="btn btn-light align-self-end">Удалить</button>
-				</li>
-
-				<li class="list-group-item d-flex justify-content-between">
-					<span class="task-title">Пройти урок по веб-разработке</span>
-					<button type="button" data-action="delete-task" class="btn btn-light align-self-end">Удалить</button>
-				</li>
-
-				<li class="list-group-item d-flex justify-content-between">
-					<span class="task-title">Прийти на вебинар</span>
-					<button type="button" data-action="delete-task" class="btn btn-light align-self-end">Удалить</button>
-				</li>
-			</ul>
-		</div>
-		<!-- //List of tasks -->
+		<li class="list-group-item d-flex justify-content-between task-item">
+			<span class="task-title">Прийти на вебинар</span>
+					<div class='task-item_buttons'><button type="button" data-action="task-done" class="btn btn-light align-self-end gray"><i class="fa fa-check"></i></button>
+					<button type="button" data-action="task-delete" class="btn btn-light align-self-end gray"><i class="fa fa-times"></i></button>
+				</div>
+		</li>
+	</ul>
+</div>
+<!-- //List of tasks -->
 
 
 
@@ -58,13 +73,11 @@
 		<div class="card bg-light" >
 			<div class="card-header">Добавить новую задачу</div>
 			<div class="card-body">
-		<form>
+		<form id='form-new-task'>
 			<div class="form-group">
 				<input type="text" class="form-control" id="addNewTask" placeholder="Текст задачи" required>
 				<small id="emailHelp" class="form-text text-muted">Что делаем, сколько времени тратим, какой результат получаем.</small>
 			</div>
-			
-			
 			<button type="submit" class="btn btn-primary  btn-lg active">Добавить</button>
 		</form>
 			</div>
@@ -74,12 +87,10 @@
 
 	</div>
 
-
-
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="js/main.js"></script>
 </body>
 </html>
